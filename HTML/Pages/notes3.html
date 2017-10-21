@@ -11,9 +11,100 @@
 	<p>The next few modules focus on building tables in HTML. But, as I was learning <code>&lt;table&gt;</code> properties on its <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table">MDN page</a> I really wanted to figure out how they made the code elements look the way they did, so spent a few minutes looking at the source for the web page until I figured (some of) it out. If you want to check out this little sidebar adventure I went on, go <a href="/HTML/Pages/notes3.1.html">here</a>.
 
 
-		<h2>Okay, Tables. For real this time</h2>
+	<h2>Okay, Tables: for real this time.</h2>
 
-		<p>loljk as it turns out I have also have a real job. brb.</p>
+	<p>As it turns out, the "old" way of doing tables is no longer the accepted method, so what I learned here regarding how to format the table won't actually be what I'll be doing later when CSS comes in to play. But for the sake of doing things in baby steps, this is fine. </p>
+
+	<p>When you do a <code>table</code> without any specific formatting, it will look like this:</p>
+
+	<table>
+		<tr>
+			<td>Item</td>
+			<td>Item</td>
+		</tr>
+		<tr>
+			<td>Item</td>
+			<td>Item</td>
+		</tr>
+	</table>
+
+	<p>Fine, but not great. No borders means this table would get hard to read pretty quickly. But, we can format it using <code>border="X"</code>, where <code>X</code> is some value. Let's redo the same table again, with <code>border</code> set to 1:</p>
+
+
+	<table border="1">
+		<tr>
+			<td>Item</td>
+			<td>Item</td>
+		</tr>
+		<tr>
+			<td>Item</td>
+			<td>Item</td>
+		</tr>
+	</table>
+
+	<p>That's a bit better. This is a quick and easy way to add borders to a <code>table</code>, but as I mentioned, no longer the correct way. More to come later, I guess.</p>
+
+
+	<h3>What about headers?</h3>
+	<p>There is another element for table headers too! Let's do this one more time:</p>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Header 1</th>
+				<th>Header 2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Item</td>
+				<td>Item</td>
+			</tr>
+			<tr>
+				<td>Item</td>
+				<td>Item</td>
+			</tr>
+		</tbody>
+	</table>
+
+<h3>Time for an exercise!</h3>
+
+<p>At this point, time to test out the skillz and actually make a semi-useful table. The exercise was to re-create a table that outlines the basic characteristics of starter first-gen Pokemon. Awesome.</p>
+
+<table border="1">
+	<thead>
+		<tr>
+			<td>Image</td>
+			<td>Name</td>
+			<td>Type</td>
+			<td>Evolves Into</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><img width="75" src="http://img4.wikia.nocookie.net/__cb20140328190757/pokemon/images/thumb/2/21/001Bulbasaur.png/200px-001Bulbasaur.png"></td>
+			<td>Bulbasaur</td>
+			<td>Grass/Poison</td>
+			<td><a href="http://pokemon.wikia.com/wiki/Ivysaur">Ivysaur</a></td>
+		</tr>
+		<tr>
+			<td><img width="75" src="http://img4.wikia.nocookie.net/__cb20140724195345/pokemon/images/thumb/7/73/004Charmander.png/200px-004Charmander.png"></td>
+			<td>Charmander</td>
+			<td>Fire</td>
+			<td><a href="http://pokemon.wikia.com/wiki/Charmeleon">Charmeleon</a></td>
+		</tr>
+		<tr>
+			<td><img width="75" src="http://img1.wikia.nocookie.net/__cb20140328191525/pokemon/images/thumb/3/39/007Squirtle.png/200px-007Squirtle.png"></td>
+			<td>Squirtle</td>
+			<td>Water</td>
+			<td><a href="http://pokemon.wikia.com/wiki/Wartortle">Wartortle</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Nice.</p>
+<p>Also worth noting: I used <code>width=""</code> inside of my <code>img</code> to adjust the size of the photo so it would not be too large. This is another thing you ideally would not do, since styling would normtally be handled by CSS and not HTML. But for now, it'll do.</p>
+
 
 
 
